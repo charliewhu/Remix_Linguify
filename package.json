@@ -17,6 +17,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "7.3.1",
+    "@cucumber/pretty-formatter": "^1.0.0",
     "@playwright/test": "^1.28.1",
     "@remix-run/dev": "^1.8.2",
     "@remix-run/eslint-config": "^1.8.2",
