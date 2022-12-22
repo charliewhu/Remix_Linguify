@@ -6,3 +6,8 @@ Then("they are redirected to the Text detail page", function () {
   // Write code here that turns the phrase above into concrete actions
   expect(1).toEqual(1);
 });
+
+Then("they should see Texts listed", function () {
+  // Write code here that turns the phrase above into concrete actions
+  expect(1).toEqual(1);
+});
