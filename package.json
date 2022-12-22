@@ -5,6 +5,7 @@
     "build": "remix build",
     "deploy": "flyctl deploy --remote-only",
     "dev": "remix dev",
+    "e2e": "cucumber-js --require cucumber.conf.js --require tests/acceptance/steps/**/*.js --format @cucumber/pretty-formatter",
     "start": "remix-serve build",
     "typecheck": "tsc -b"
   },
