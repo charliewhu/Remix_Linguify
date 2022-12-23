@@ -7,6 +7,15 @@ export const meta: MetaFunction = () => ({
 
 export default function create() {
   return (
-    <div>create</div>
+    <>
+      <form method='POST'>
+        <input
+          type='text'
+          name='name'
+          id='name'
+          placeholder='Name'
+        />
+      </form>
+    </>
   );
 }
