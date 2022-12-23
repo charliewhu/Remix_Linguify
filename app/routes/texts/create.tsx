@@ -15,13 +15,14 @@ export default function create() {
           id='name'
           placeholder='Name'
         />
-        <input
-          type='text'
+        <textarea
           name='body'
           id='body'
           placeholder='Body'
         />
-        <button type='submit' />
+        <button type='submit'>
+          Create
+        </button>
       </form>
     </>
   );
