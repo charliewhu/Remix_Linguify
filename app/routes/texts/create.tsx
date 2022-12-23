@@ -15,6 +15,13 @@ export default function create() {
           id='name'
           placeholder='Name'
         />
+        <input
+          type='text'
+          name='body'
+          id='body'
+          placeholder='Body'
+        />
+        <button type='submit' />
       </form>
     </>
   );
