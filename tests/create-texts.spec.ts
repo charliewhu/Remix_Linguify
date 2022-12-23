@@ -5,7 +5,7 @@ let text = "Test Text"
 test('', async ({ page }) => {
     // Given the User is on the NewText page
     await page.goto('/texts/new/');
-    await expect(page).toHaveTitle(/New Remix App/);
+    await expect(page).toHaveTitle(/New Text/);
     
     // When they fill Text content
     // And they click Submit button
