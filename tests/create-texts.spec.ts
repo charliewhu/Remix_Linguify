@@ -11,8 +11,8 @@ test('', async ({ page }) => {
     // When they fill Name content
     // And they fill Body content
     // And they click Submit button
-    await page.getByLabel("name").fill(name);
-    await page.getByLabel("body").fill(body);
+    await page.getByPlaceholder("name").fill(name);
+    await page.getByPlaceholder("body").fill(body);
     await page.locator('button[type="submit"]').click();
     
     // Then they are redirected to the Text detail page
