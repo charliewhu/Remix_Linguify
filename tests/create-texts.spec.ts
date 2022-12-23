@@ -1,19 +1,24 @@
 import { test, expect } from '@playwright/test'
 
-let text = "Test Text"
+let name = "Name"
+let body = "Body"
 
 test('', async ({ page }) => {
     // Given the User is on the NewText page
     await page.goto('/texts/create/');
     await expect(page).toHaveTitle(/New Text/);
     
-    // When they fill Text content
+    // When they fill Name content
+    // And they fill Body content
     // And they click Submit button
-    await page.locator('input[type="text"]').fill(text);
+    await page.getByLabel("name").fill(name);
+    await page.getByLabel("body").fill(body);
     await page.locator('button[type="submit"]').click();
     
     // Then they are redirected to the Text detail page
-    // And they see the new text
+    // And they see the new text name
+    // And they see the new text body
     await expect(page).toHaveURL(/texts\/1/);
-    await expect(page).toContain(text);
+    await expect(page).toContain(name);
+    await expect(page).toContain(body);
   });
