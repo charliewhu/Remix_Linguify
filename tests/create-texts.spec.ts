@@ -4,7 +4,7 @@ let text = "Test Text"
 
 test('', async ({ page }) => {
     // Given the User is on the NewText page
-    await page.goto('/texts/new/');
+    await page.goto('/texts/create/');
     await expect(page).toHaveTitle(/New Text/);
     
     // When they fill Text content
