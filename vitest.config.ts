@@ -2,8 +2,7 @@
 /// <reference types="vite/client" />
 
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import { configDefaults } from 'vitest/config'
+import { defineConfig, configDefaults } from 'vitest/config'
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
@@ -15,3 +14,6 @@ export default defineConfig({
     setupFiles: ["./tests/setup-test-env.ts"],
   },
 });
+
+
+
