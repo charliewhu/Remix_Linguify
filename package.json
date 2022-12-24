@@ -7,6 +7,7 @@
     "dev": "remix dev",
     "e2e": "playwright test",
     "start": "remix-serve build",
+    "test": "jest --watch",
     "typecheck": "tsc -b"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@playwright/test": "^1.28.1",
     "@remix-run/dev": "^1.8.2",
     "@remix-run/eslint-config": "^1.8.2",
+    "@types/jest": "^29.2.4",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "eslint": "^8.29.0",
