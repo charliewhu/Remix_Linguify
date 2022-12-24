@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export const action: ActionFunction = async ({request}) => {
-  return redirect('/texts//1')
+  return redirect('/texts/1')
 }
 
 export default function create() {
