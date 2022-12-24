@@ -1,9 +1,14 @@
-import type { MetaFunction } from "@remix-run/node"; 
+import type { ActionFunction, MetaFunction} from "@remix-run/node";
+import { redirect } from "@remix-run/node"; 
 import { Form } from "@remix-run/react";
 
 export const meta: MetaFunction = () => ({
   title: "New Text",
-}); 
+});
+
+export const action: ActionFunction = async ({request}) => {
+  return redirect('/texts//1')
+}
 
 export default function create() {
   return (
