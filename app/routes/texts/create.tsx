@@ -10,7 +10,7 @@ export const action: ActionFunction = async ({request}) => {
   return redirect('/texts/1')
 }
 
-export default function create() {
+export default function TextCreate() {
   return (
     <>
       <Form method='post'>
