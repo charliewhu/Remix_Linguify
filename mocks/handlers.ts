@@ -5,7 +5,7 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.json({
-        id: '1',
+        id: 1,
         name: 'name',
         body: 'body',
       }),

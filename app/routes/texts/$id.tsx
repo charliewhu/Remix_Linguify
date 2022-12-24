@@ -1,11 +1,11 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react"
-import {getText} from "../../../services/texts"
+import textService from "../../../services/texts.service"
 
 type LoaderData = { id: number; name: string; body: string }
 
 export const loader: LoaderFunction = async ({ request, params }) => {
-  const data: LoaderData = getText(params.id)
+  const data: LoaderData = await textService.getText(+params.id)
   return data
 }
 
