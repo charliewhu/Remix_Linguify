@@ -5,6 +5,6 @@ describe('Loader', () => {
     const request = new Request('http://fake.api/1/');
     const response = await loader({request, context: {}, params: { id: "1" } });
 
-    expect(response).toEqual({id: "1", name: "name", body: "body"})
+    expect(response).toEqual({id: 1, name: "name", body: "body"})
   })
 })

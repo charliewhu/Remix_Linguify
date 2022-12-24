@@ -11,6 +11,7 @@ export const loader: LoaderFunction = async ({ request, params }) => {
 
 export default function TextDetail() {
   const data = useLoaderData<LoaderData>()
+  console.log(data)
 
   return (
     <div>
