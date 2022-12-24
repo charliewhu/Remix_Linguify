@@ -1,5 +1,5 @@
-import React from 'react';
 import type { MetaFunction } from "@remix-run/node"; 
+import { Form } from "@remix-run/react";
 
 export const meta: MetaFunction = () => ({
   title: "New Text",
@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => ({
 export default function create() {
   return (
     <>
-      <form method='POST'>
+      <Form method='post'>
         <input
           type='text'
           name='name'
@@ -23,7 +23,7 @@ export default function create() {
         <button type='submit'>
           Create
         </button>
-      </form>
+      </Form>
     </>
   );
 }
