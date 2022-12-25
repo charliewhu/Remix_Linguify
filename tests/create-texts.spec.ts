@@ -19,7 +19,7 @@ test('', async ({ page, request }) => {
   // And they are redirected to the Text detail page
   // And they see the new text name
   // And they see the new text body
-  const issues = await request.post(`**/api/texts/create/`);
+  const issues = await request.post(`**/api/texts/`);
   expect(issues.ok()).toBeTruthy();
   await expect(page).toHaveURL(/texts\/1/);
   await page.getByText(name)
