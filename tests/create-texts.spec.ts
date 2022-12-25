@@ -19,6 +19,6 @@ test('', async ({ page }) => {
   // And they see the new text name
   // And they see the new text body
   await expect(page).toHaveURL(/texts\/1/);
-  await expect(page).toContain(name);
-  await expect(page).toContain(body);
+  await page.getByText(name)
+  await page.getByText(body)
 });
