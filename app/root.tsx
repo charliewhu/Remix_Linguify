@@ -8,6 +8,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+if (process.env.NODE_ENV === 'development') {
+  require('../mocks/server') 
+}
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Linguify",
