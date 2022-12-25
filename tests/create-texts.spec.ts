@@ -1,21 +1,9 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from '../mocks/playwrightMock'
 
-let id = 1
 let name = "Name"
 let body = "Body"
 
-let data = {
-  id: id,
-  name: name,
-  body: body,
-}
-
 test('', async ({ page }) => {
-  await page.route('linguify.up.railway.app/texts/1/', route => route.fulfill({
-    status: 200,
-    body: JSON.stringify(data),
-  }));
-
   // Given the User is on the NewText page
   await page.goto('/texts/create/');
   await expect(page).toHaveTitle(/New Text/);
