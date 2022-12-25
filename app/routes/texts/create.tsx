@@ -1,12 +1,19 @@
 import type { ActionFunction, MetaFunction} from "@remix-run/node";
 import { redirect } from "@remix-run/node"; 
 import { Form } from "@remix-run/react";
+import textService from "services/texts.service";
 
 export const meta: MetaFunction = () => ({
   title: "New Text",
 });
 
 export const action: ActionFunction = async ({request}) => {
+  const form = await request.formData()
+  const name = form.get('name')
+  const body = form.get('body')
+
+  textService.postText({name, body})
+
   return redirect('/texts/1')
 }
 
