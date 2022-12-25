@@ -1,6 +1,6 @@
 import axiosInstance from "./base.service";
 
-async function getText(id: number){
+async function getText(id: string | undefined){
   try {
     const response = await axiosInstance(`/texts/${id}/`)
     return response.data;
