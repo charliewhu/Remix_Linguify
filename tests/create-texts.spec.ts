@@ -1,7 +1,7 @@
-import { test, expect } from '../mocks/playwrightMock'
+import {test, expect} from '@playwright/test'
 
-let name = "Name"
-let body = "Body"
+let name = "name"
+let body = "body"
 
 test('', async ({ page }) => {
   // Given the User is on the NewText page
