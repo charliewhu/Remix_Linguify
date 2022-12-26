@@ -22,8 +22,11 @@ jobs:
       run: yarn
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
-    - name: Run dev server and Playwright tests
-      run: yarn dev && yarn e2e
+    - name: Run Playwright tests
+      run: yarn e2e
+      with:
+        start: yarn dev
+        wait-on: 'http://localhost:3000'
     - uses: actions/upload-artifact@v3
       if: always()
       with:
