@@ -15,12 +15,9 @@ test('', async ({ page, request }) => {
   await page.getByPlaceholder("body").fill(body);
   await page.locator('button[type="submit"]').click();
   
-  // Then there is a POST request to the server
-  // And they are redirected to the Text detail page
+  // Then they are redirected to the Text detail page
   // And they see the new text name
   // And they see the new text body
-  const issues = await request.post(`**/api/texts/`);
-  expect(issues.ok()).toBeTruthy();
   await expect(page).toHaveURL(/texts\/1/);
   await page.getByText(name)
   await page.getByText(body)
