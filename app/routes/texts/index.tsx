@@ -19,7 +19,7 @@ export default function TextList() {
   return (
     <div>
       {data.map(text => (
-        <li key={text.id}>{text.name}</li>
+        <li data-testid='textItem' key={text.id}>{text.name}</li>
       ))}
     </div>
   )

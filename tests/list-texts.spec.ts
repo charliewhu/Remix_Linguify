@@ -6,7 +6,6 @@ test('viewing the list of Texts', async ({page}) => {
     await expect(page).toHaveTitle(/My Texts/);
 
     // Then they should see Texts listed
-    const listItems = await page.locator('#textItem')
-    console.log(listItems)
-    await expect(listItems.count()).toBeGreaterThan(1)
+    const listItems = await page.getByTestId('textItem').count()
+    await expect(listItems).toBeGreaterThan(1)
 })
