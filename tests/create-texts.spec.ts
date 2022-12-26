@@ -3,7 +3,7 @@ import {test, expect} from '@playwright/test'
 let name = "name"
 let body = "body"
 
-test('', async ({ page, request }) => {
+test('Creating a new Text', async ({ page }) => {
   // Given the User is on the NewText page
   await page.goto('/texts/create/');
   await expect(page).toHaveTitle(/New Text/);

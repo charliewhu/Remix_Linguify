@@ -4,7 +4,7 @@ import textService from "../../../services/texts.service"
 
 type LoaderData = { id: number; name: string; body: string }
 
-export const loader: LoaderFunction = async ({ request, params }) => {
+export const loader: LoaderFunction = async ({ params }) => {
   const data: LoaderData = await textService.getText(params.id)
   return data
 }

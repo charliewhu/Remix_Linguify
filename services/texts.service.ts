@@ -11,6 +11,16 @@ async function getText(id: string | undefined){
   }
 };
 
+async function getTexts() {
+  try {
+    const response = await axiosInstance.get("/texts/")
+    return response.data;
+  } catch (error) {
+    console.log(error)
+    return error
+  }
+}
+
 async function postText(data: textData) {
   try {
     const response = await axiosInstance.post(`/texts/`, data)
@@ -22,6 +32,7 @@ async function postText(data: textData) {
 
 const textService = {
   getText,
+  getTexts,
   postText,
 }
 
