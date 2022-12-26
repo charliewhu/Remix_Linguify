@@ -1,6 +1,6 @@
 import axiosInstance from "./base.service";
 
-type textData = { name: string; body: string }
+type textData = { name: any; body: any }
 
 async function getText(id: string | undefined){
   try {
