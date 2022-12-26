@@ -24,17 +24,18 @@ export const handlers = [
   rest.get('**/api/texts/', (req, res, ctx) => {
     return res(
       ctx.status(200),
-      ctx.json([{
-        id: 1,
-        name: 'name1',
-        body: 'body1',
-      },
-      {
-        id: 2,
-        name: 'name2',
-        body: 'body2'
-      }
-    ])
+      ctx.json([
+        {
+          id: 1,
+          name: 'name1',
+          body: 'body1',
+        },
+        {
+          id: 2,
+          name: 'name2',
+          body: 'body2'
+        }
+      ])
     )
   })
 ]
