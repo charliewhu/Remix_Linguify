@@ -8,11 +8,15 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+if (process.env.NODE_ENV === 'development') {
+  require('../mocks/server') 
+}
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Linguify",
   viewport: "width=device-width,initial-scale=1",
-});
+}); 
 
 export default function App() {
   return (
@@ -25,7 +29,7 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
+        {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
       </body>
     </html>
   );
