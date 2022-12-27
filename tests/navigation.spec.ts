@@ -2,6 +2,20 @@ import {test, expect} from '@playwright/test'
 
 test.describe('navigation',  () => {
 
+  test.describe('Home Page', () => {
+    test('links to TextDetail', async ({ page }) => {
+      // Given the User is on the Home page
+      await page.goto('/');
+      await expect(page).toHaveTitle(/Linguify/);
+
+      // When they click on the View Texts link
+      await page.getByText('View Texts').click()
+
+      // Then they should be on the TextList page
+      await expect(page).toHaveURL('/texts/')
+    })
+  });
+
   test.describe('TextList', () => {
     test('links to TextDetail', async ({ page }) => {
       // Given the User is on the TextList page
