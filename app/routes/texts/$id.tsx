@@ -1,5 +1,5 @@
 import type { LoaderFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react"
+import { Link, useLoaderData } from "@remix-run/react"
 import textService from "../../../services/texts.service"
 
 type LoaderData = { id: number; name: string; body: string }
@@ -14,9 +14,10 @@ export default function TextDetail() {
 
   return (
     <div>
+      <Link to="/texts/" data-testid="goBackBtn">Back</Link>
       <div>{data.name}</div>
       <div>{data.body}</div>
     </div>
-    )
-  }
+  )
+}
   
